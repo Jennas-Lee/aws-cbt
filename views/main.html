@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <div class="container mt-2">
+        <div class="jumbotron text-center">
+            <h1 class="display-4">AWS Certificated CBT</h1>
+            <p class="lead">AWS Certificated을 합격하기 위해 만든 CBT 서비스입니다.</p>
+            <hr class="my-4">
+            <a class="btn btn-primary btn-lg" href="/solve">문제 풀기</a>
+            <a class="btn btn-primary btn-lg" href="/record">이력 확인</a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="card">
+            <h5 class="card-header">
+                최근 푼 문제
+            </h5>
+            <div class="card-body">
+                <h6 class="card-title">
+                {% if recent and user %}
+                    <!-- 최근에 푼 문제 표시 -->
+                {% elif user %}
+                    최근에 푼 문제가 존재하지 않습니다. <a href="/solve">문제 풀기</a>
+                {% else %}
+                    <a href="/auth/login">먼저 로그인해주세요!</a>
+                {% endif %}
+                </h6>
+            </div>
+        </div>
+    </div>
+{% endblock %}

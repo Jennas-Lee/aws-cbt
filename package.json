@@ -1,0 +1,38 @@
+{
+  "name": "aws-cbt",
+  "version": "0.0.0",
+  "description": "AWS CBT 서비스",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jennas-Lee/AWS-CBT.git"
+  },
+  "author": "JennasLee",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Jennas-Lee/AWS-CBT/issues"
+  },
+  "homepage": "https://github.com/Jennas-Lee/AWS-CBT#readme",
+  "dependencies": {
+    "connect-redis": "^5.0.0",
+    "cookie-parser": "^1.4.5",
+    "csurf": "^1.11.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "helmet": "^4.1.1",
+    "hpp": "^0.2.3",
+    "morgan": "^1.10.0",
+    "mysql2": "^2.2.5",
+    "nunjucks": "^3.2.2",
+    "redis": "^3.0.2",
+    "sanitize-html": "^2.0.0",
+    "sequelize": "^6.3.5",
+    "sequelize-cli": "^6.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}

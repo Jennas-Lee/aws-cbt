@@ -1,0 +1,38 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+{% if user %}
+    <script type="text/javascript">
+        alert("이미 로그인되어있습니다.");
+        location.href="/";
+    </script>
+{% else %}
+    <div class="container" style="width: 300px;">
+        <form method="post">
+            <h3 class="text-center">로그인</h3>
+            <div class="form-group">
+                <label for="inputEmail">이메일</label>
+                <input type="email" class="form-control" id="inputEmail" placeholder="이메일" required autofocus>
+                <div id="inputEmailValid" class="invalid-feedback"></div>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword">비밀번호</label>
+                <input type="password" class="form-control" id="inputPassword" placeholder="비밀번호" required>
+                <div id="inputPasswordValid" class="invalid-feedback"></div>
+            </div>
+            <div class="form-group">
+                <button type="submit" id="submit" class="btn btn-primary" onclick="$('#spinner').addClass('spinner-border spinner-border-sm');">
+                    <span id="spinner" class="text-light" role="status" aria-hidden="true"></span>
+                    로그인
+                </button>
+            </div>
+        </form>
+        <hr>
+        <a href="/auth/password">비밀번호 찾기</a> |
+        <a href="/auth/join">회원가입</a>
+    </div>
+{% endblock %}
+
+{% block script %}
+<script src="login.js"></script>
+{% endblock %}
