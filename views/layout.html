@@ -51,18 +51,18 @@
                     <a class="btn btn-outline-success my-2 my-sm-0" href="/auth/logout">로그아웃</a>
                 {% else %}
                 </ul>
-
-                    <a class="btn btn-outline-success my-2 my-sm-0" href="/auth/login">로그인</a>
+                    <a class="btn btn-outline-success my-2 my-sm-0" href="/login">로그인</a>
                 {% endif %}
             </div>
         </nav>
     </header>
-    <main role="main">
+    <main role="main" class="mt-4">
         {% block content %}
         {% endblock %}
     </main>
-    <footer>
-        Made by <a href="mailto:leezeunjun@gmail.com" class="text-decoration-none">Jennas-Lee</a>
+    <footer class="fixed-bottom text-center mb-4">
+        <hr>
+        <p class="container">Made by <a href="mailto:leezeunjun@gmail.com" class="text-decoration-none">Jennas-Lee</a></p>
     </footer>
     {% block script %}
     {% endblock %}

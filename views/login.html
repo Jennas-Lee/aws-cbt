@@ -12,12 +12,12 @@
             <h3 class="text-center">로그인</h3>
             <div class="form-group">
                 <label for="inputEmail">이메일</label>
-                <input type="email" class="form-control" id="inputEmail" placeholder="이메일" required autofocus>
+                <input type="email" class="form-control" id="inputEmail" placeholder="Email" required autofocus>
                 <div id="inputEmailValid" class="invalid-feedback"></div>
             </div>
             <div class="form-group">
                 <label for="inputPassword">비밀번호</label>
-                <input type="password" class="form-control" id="inputPassword" placeholder="비밀번호" required>
+                <input type="password" class="form-control" id="inputPassword" placeholder="Password" required>
                 <div id="inputPasswordValid" class="invalid-feedback"></div>
             </div>
             <div class="form-group">
@@ -28,11 +28,12 @@
             </div>
         </form>
         <hr>
-        <a href="/auth/password">비밀번호 찾기</a> |
-        <a href="/auth/join">회원가입</a>
+        <a href="/password">비밀번호 찾기</a> |
+        <a href="/join">회원가입</a>
     </div>
+{% endif %}
 {% endblock %}
 
 {% block script %}
-<script src="login.js"></script>
+<script src="/js/login.js"></script>
 {% endblock %}
